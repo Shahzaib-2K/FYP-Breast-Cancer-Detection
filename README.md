@@ -2,15 +2,12 @@
 
 An AI-powered web application that detects and classifies regions of interest in mammogram images as benign or malignant. Built as a Final Year Project, combining a React frontend with a FastAPI backend running an ensemble of deep learning models.
 
-<!--
-SCREENSHOT 1: Add a screenshot of your Home page here.
-Replace the line below with: ![Home Page](screenshots/home.png)
--->
-![Home Page](screenshots/home.png)
-
 ## Overview
 
 The system takes a mammogram image as input and runs it through a multi-stage pipeline: a YOLO model first detects candidate regions of interest, then ResNet and Vision Transformer (ViT) classifiers analyze each region, and an XGBoost model fuses their outputs into a final prediction. Grad-CAM and ViT attention maps are generated so predictions can be visually explained rather than treated as a black box.
+
+## Demolink
+https://drive.google.com/file/d/10BRvVgclBB0RrXv1YHwICvUgDlr_9UJg/view
 
 ## Features
 
@@ -19,12 +16,6 @@ The system takes a mammogram image as input and runs it through a multi-stage pi
 - Dual classification via ResNet and ViT models, fused with XGBoost
 - Visual explainability through Grad-CAM and attention heatmaps
 - Clean, responsive web interface
-
-<!--
-SCREENSHOT 2: Add a screenshot of your Demo/results page here.
-Replace the line below with: ![Detection Demo](screenshots/demo.png)
--->
-![Detection Demo](screenshots/demo.png)
 
 ## Tech Stack
 
@@ -92,12 +83,6 @@ npm start
 ```
 
 The frontend will run on `http://localhost:3000` and connect to the backend API.
-
-<!--
-SCREENSHOT 3 (optional): Add a screenshot showing the Grad-CAM/attention visualization output here.
-Replace the line below with: ![Explainability Output](screenshots/explainability.png)
--->
-![Explainability Output](screenshots/explainability.png)
 
 ## Disclaimer
 

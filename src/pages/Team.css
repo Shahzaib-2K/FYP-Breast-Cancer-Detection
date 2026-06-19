@@ -1,0 +1,318 @@
+/* Team page — shares Demo.css layout tokens (.demo + demo-content, upload-section, …). */
+
+.team {
+  min-height: 100vh;
+}
+
+.team .page-heading__lead {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Team grid inside Demo upload-section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  gap: 1.75rem;
+}
+
+/* Match Demo .visualization-card */
+.team-card {
+  background: var(--clinical-surface);
+  padding: 1.35rem 1.25rem 1.5rem;
+  border-radius: var(--clinical-radius-lg);
+  text-align: center;
+  border: 1px solid var(--clinical-border-subtle);
+  box-shadow: var(--clinical-shadow), var(--clinical-shadow-inset);
+}
+
+.member-photo {
+  width: 7rem;
+  height: 7rem;
+  margin: 0 auto 1.1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--clinical-border-subtle);
+  box-shadow: var(--clinical-shadow);
+  background: var(--clinical-accent-tint);
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info h3 {
+  color: var(--clinical-heading);
+  margin-bottom: 0.45rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.member-registration {
+  color: var(--clinical-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.member-registration svg {
+  flex-shrink: 0;
+  color: var(--clinical-primary);
+}
+
+.member-email {
+  color: var(--clinical-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+  word-break: break-word;
+  text-align: center;
+  max-width: 100%;
+}
+
+.member-email:hover {
+  color: var(--clinical-secondary);
+}
+
+/* Supervisors — reuse team card grid; icon avatar matches member-photo footprint */
+.member-photo--supervisor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(145deg, var(--clinical-primary) 0%, var(--clinical-secondary) 100%);
+}
+
+.member-photo--supervisor svg {
+  flex-shrink: 0;
+}
+
+.team-supervisors .team-supervisors__header {
+  margin-bottom: 0.25rem;
+}
+
+.team-supervisors .page-heading__title {
+  letter-spacing: -0.03em;
+}
+
+/* Contact — two columns inside one upload-section */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.contact-info__intro {
+  text-align: left;
+  margin-bottom: 1.35rem;
+}
+
+.contact-info__intro h2 {
+  text-align: left;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-item svg {
+  color: var(--clinical-primary);
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.contact-item h4 {
+  color: var(--clinical-heading);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-item p {
+  color: var(--clinical-text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-form-container {
+  background: var(--clinical-section-alt-bg, #f6f8fb);
+  padding: 1.25rem 1.15rem;
+  border-radius: var(--clinical-radius-lg);
+  border: 1px solid var(--clinical-border-subtle);
+  box-shadow: none;
+}
+
+.contact-form__title,
+.contact-form h3.contact-form__title {
+  color: var(--clinical-heading);
+  margin: 0 0 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--clinical-heading);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--clinical-border);
+  border-radius: var(--clinical-radius);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: var(--clinical-surface);
+  color: var(--clinical-text);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--clinical-primary);
+  box-shadow: 0 0 0 3px rgba(26, 95, 138, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--clinical-text-muted);
+  opacity: 0.85;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 7.5rem;
+}
+
+/* Match Demo .analyze-btn */
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem 1.85rem;
+  min-height: 3.1rem;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.15rem;
+}
+
+/* Project info — match Demo visualization / instruction card rhythm */
+.project-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: var(--clinical-surface);
+  padding: 1.35rem 1.25rem 1.5rem;
+  border-radius: var(--clinical-radius-lg);
+  text-align: center;
+  border: 1px solid var(--clinical-border-subtle);
+  box-shadow: var(--clinical-shadow), var(--clinical-shadow-inset);
+  transition:
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.info-card:hover {
+  box-shadow: var(--clinical-shadow-md), var(--clinical-shadow-inset);
+  border-color: rgba(26, 95, 138, 0.15);
+}
+
+.info-card h4 {
+  color: var(--clinical-heading);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.info-card p {
+  color: var(--clinical-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form__title,
+  .contact-form h3.contact-form__title {
+    text-align: center;
+  }
+
+  .project-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .member-photo {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+
+  .member-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-form-container {
+    padding: 1.1rem 1rem;
+  }
+
+  .info-card {
+    padding: 1.25rem 1.1rem;
+  }
+}

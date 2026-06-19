@@ -1,0 +1,562 @@
+.project {
+  min-height: 100vh;
+}
+
+/* Project Hero */
+.project-hero {
+  background: transparent;
+  color: var(--clinical-text);
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.project-hero h1 {
+  color: var(--clinical-heading);
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.project-subtitle {
+  font-size: 1rem;
+  color: var(--clinical-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* In-page centered titles (scoped so Home clinical headers are unaffected) */
+main .text-center h2 {
+  font-size: clamp(1.45rem, 2.8vw, 2rem);
+  margin-bottom: 1rem;
+  color: var(--clinical-heading);
+}
+
+/* Methodology Section */
+.methodology-content {
+  max-width: min(73.75rem, 100%);
+  margin: 0 auto;
+}
+
+.methodology-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.flow-step {
+  background: var(--clinical-surface);
+  padding: 1rem 1.25rem;
+  border-radius: var(--clinical-radius);
+  text-align: center;
+  box-shadow: var(--clinical-shadow);
+  border: 1px solid var(--clinical-border-subtle);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flow-step:hover {
+  box-shadow: var(--clinical-shadow-md);
+  transform: translateY(-2px);
+}
+
+.flow-step .step-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(145deg, var(--clinical-primary) 0%, var(--clinical-secondary) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 0.75rem;
+  box-shadow: var(--clinical-shadow);
+  transition: opacity 0.3s ease;
+}
+
+.flow-step:hover .step-icon {
+  opacity: 0.95;
+}
+
+.flow-step h4 {
+  color: var(--clinical-heading);
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.flow-step p {
+  color: var(--clinical-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+.flow-arrow {
+  font-size: 2rem;
+  color: var(--clinical-primary);
+  opacity: 0.55;
+  font-weight: bold;
+  margin: -0.5rem 0;
+  line-height: 1;
+  transform: rotate(90deg);
+}
+
+.methodology-description {
+  background: var(--clinical-surface);
+  padding: 2rem;
+  border-radius: var(--clinical-radius);
+  box-shadow: var(--clinical-shadow);
+  border: 1px solid var(--clinical-border-subtle);
+}
+
+.methodology-description h3 {
+  color: var(--clinical-heading);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.methodology-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: var(--clinical-text);
+}
+
+/* Technical Specifications — three cards on one row (stack on small screens) */
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.spec-card {
+  background: var(--clinical-surface);
+  padding: 2rem 1.5rem;
+  border-radius: var(--clinical-radius);
+  box-shadow: var(--clinical-shadow);
+  border: 1px solid var(--clinical-border-subtle);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.spec-card:hover {
+  box-shadow: var(--clinical-shadow-md);
+  transform: translateY(-2px);
+}
+
+.spec-card h3 {
+  color: var(--clinical-heading);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--clinical-secondary);
+  padding-bottom: 0.5rem;
+}
+
+.spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.spec-item svg {
+  color: var(--clinical-primary);
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.spec-item strong {
+  color: var(--clinical-heading);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.spec-item p {
+  color: var(--clinical-text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Timeline */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--clinical-border);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-marker {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.timeline-marker.fyp1 {
+  background: var(--clinical-secondary);
+}
+
+.timeline-marker.fyp2 {
+  background: var(--clinical-primary);
+}
+
+.timeline-content {
+  flex: 1;
+  background: var(--clinical-surface);
+  padding: 1.5rem;
+  border-radius: var(--clinical-radius);
+  box-shadow: var(--clinical-shadow);
+  border: 1px solid var(--clinical-border-subtle);
+  margin-top: 0.5rem;
+}
+
+.timeline-content h4 {
+  color: var(--clinical-heading);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.timeline-date {
+  color: var(--clinical-primary);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-content li {
+  color: var(--clinical-text);
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.timeline-content li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--clinical-secondary);
+  font-weight: bold;
+}
+
+/* Performance Metrics */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.metric-card {
+  background: var(--clinical-surface);
+  padding: 1.5rem;
+  border-radius: var(--clinical-radius);
+  text-align: center;
+  box-shadow: var(--clinical-shadow);
+  border: 1px solid var(--clinical-border-subtle);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.metric-card:hover {
+  box-shadow: var(--clinical-shadow-md);
+  transform: translateY(-2px);
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--clinical-primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.metric-label {
+  color: var(--clinical-heading);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Innovation Highlights */
+.innovation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.innovation-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--clinical-surface);
+  border-radius: var(--clinical-radius);
+  box-shadow: var(--clinical-shadow);
+  border: 1px solid var(--clinical-border-subtle);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.innovation-item:hover {
+  box-shadow: var(--clinical-shadow-md);
+  transform: translateY(-2px);
+}
+
+.innovation-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(145deg, var(--clinical-primary) 0%, var(--clinical-secondary) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 1.25rem;
+  box-shadow: var(--clinical-shadow);
+}
+
+.innovation-item h4 {
+  color: var(--clinical-heading);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.innovation-item p {
+  color: var(--clinical-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .project-hero h1 {
+    font-size: 2.25rem;
+  }
+  
+  .project-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .methodology-flow {
+    gap: 3rem;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+  .project-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .project-subtitle {
+    font-size: 1rem;
+  }
+  
+  .methodology-flow {
+    gap: 2.5rem;
+  }
+  
+  .flow-step {
+    min-width: 180px;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  .project-hero h1 {
+    font-size: 1.875rem;
+  }
+  
+  .project-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .methodology-flow {
+    gap: 2rem;
+  }
+  
+  .flow-step {
+    min-width: 160px;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .project-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .project-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .flow-step {
+    padding: 2.5rem 2rem;
+  }
+  
+  .flow-step .step-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .flow-step h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .flow-step p {
+    font-size: 1rem;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-marker {
+    width: 50px;
+    height: 50px;
+    margin-right: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .innovation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 640px) {
+  .project-hero {
+    padding: 2.5rem 0 1.5rem;
+  }
+  
+  .project-hero h1 {
+    font-size: 1.625rem;
+  }
+  
+  .project-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .methodology-description {
+    padding: 2rem;
+  }
+  
+  .timeline-marker {
+    width: 45px;
+    height: 45px;
+    margin-right: 1.25rem;
+  }
+  
+  .timeline-content {
+    padding: 1.25rem;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-hero {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .project-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .methodology-description {
+    padding: 1.5rem;
+  }
+
+  .timeline-marker {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    font-size: 0.7rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.25rem;
+  }
+
+  .metric-value {
+    font-size: 2.5rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+  <defs>
+    <linearGradient id="fMarkBg" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7ec4b8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1a5f8a" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#fMarkBg)"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" fill="none" stroke="#ffffff" stroke-opacity="0.12"/>
+  <g
+    transform="translate(4 4) scale(1)"
+    fill="none"
+    stroke="#b8e8dc"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M6 18h8" />
+    <path d="M3 22h18" />
+    <path d="M14 22a7 7 0 1 0 0-14h-1" />
+    <path d="M9 14h2" />
+    <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" />
+    <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "short_name": "Breast Cancer Detection",
+  "name": "Breast Cancer Detection",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "32x32",
+      "purpose": "any"
+    },
+    {
+      "src": "brand-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "64x64",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#122f45",
+  "background_color": "#eef3f7"
+}

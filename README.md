@@ -59,12 +59,14 @@ breast-cancer-detection/
 | `xgboost_fused.json`    | 132 KB | XGBoost — final decision maker           |
 | `xgb_config.json`       | 4 KB   | Config flag (L2 normalisation on/off)    |
 
-Due to GitHub's file size limits, two of the trained models are hosted separately as [GitHub Release assets]"https://github.com/Shahzaib-2K/FYP-Breast-Cancer-Detection/releases/tag/V2.0" rather than committed directly to the repo:
+Due to GitHub's file size limitations, two of the trained model are not stored directly in this repository. Instead, the following models are available as GitHub Release assets:
 
-- `vit_best.pt` — Vision Transformer classifier
-- `best_classifier.pt` — ResNet classifier
+* `best_classifier.pt` (ResNet50)
+* `vit_best.pt` (Vision Transformer)
 
-Download these and place them in the `models/` folder before running the backend locally.
+Download and place them in the `models/` folder before running the backend locally:
+https://github.com/Shahzaib-2K/FYP-Breast-Cancer-Detection/releases/tag/V2.0
+
 
 ## Running Locally
 

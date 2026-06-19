@@ -1,0 +1,5 @@
+{
+  "use_l2_normalization": false,
+  "crop_test_acc": 97.80960404380792,
+  "crop_test_auc": 99.50760866068269
+}

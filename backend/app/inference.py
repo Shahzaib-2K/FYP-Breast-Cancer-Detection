@@ -24,7 +24,7 @@ from torchvision import models, transforms
 try:
     from ultralytics import YOLO
 except ImportError:
-    YOLO = None  # type: ignore[misc, assignment]
+    YOLO = None  #type: ignore[misc, assignment]
 
 try:
     from transformers import ViTConfig, ViTForImageClassification
